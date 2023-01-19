@@ -1,0 +1,7 @@
+
+k
+java:S22597"IA "NullPointerException" could be thrown; "tempAccount" is nullable here.(ÚçİÈıÿÿÿÿ8Ú®çÚÎ0
+W	java:S125"<This block of commented-out lines of code should be removed.(»â¢}8ß®çÚÎ0
+E
+java:S1125>"(Remove the unnecessary boolean literals.(È¥Ò8å®çÚÎ0
+Z	java:S106C"9Replace this use of System.out or System.err by a logger.(Ê Ùáøÿÿÿÿ8ç®çÚÎ0

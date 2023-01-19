@@ -1,0 +1,10 @@
+
+
+java:S14881"dImmediately return this expression instead of assigning it to the temporary variable "categoryList".(Ì„Åäþÿÿÿÿ
+Ž
+java:S1488O"lImmediately return this expression instead of assigning it to the temporary variable "categoryListBySearch".(ôÛÂÏøÿÿÿÿ8ÐÉ¨ƒÏ0
+>
+java:S1125Y"(Remove the unnecessary boolean literals.(Ú­Á²
+M
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8´¼­ƒÏ0

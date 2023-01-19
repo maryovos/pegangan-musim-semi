@@ -1,0 +1,19 @@
+
+z
+java:S1488)"dImmediately return this expression instead of assigning it to the temporary variable "customerList".(Ä·»Ò
+
+java:S1488ƒ"vImmediately return this expression instead of assigning it to the temporary variable "customerListByMembershipNumber".(Ü‘³€
+
+java:S1488‹"jImmediately return this expression instead of assigning it to the temporary variable "customerListByName".(ÙŸïê
+ˆ
+java:S1488›"lImmediately return this expression instead of assigning it to the temporary variable "customerListBySearch".(’â¥ªıÿÿÿÿ
+
+java:S1488¢"eImmediately return this expression instead of assigning it to the temporary variable "newExpireDate".(İíÿáÿÿÿÿÿ
+~
+java:S1488ª"bImmediately return this expression instead of assigning it to the temporary variable "expireDate".(ĞôĞûÿÿÿÿ
+H
+java:S1481‚"1Remove this unused "customerList" local variable.(Ä·»Ò
+H
+java:S1481Š"1Remove this unused "customerList" local variable.(Ä·»Ò
+?
+java:S1125•"(Remove the unnecessary boolean literals.(Ü÷¹†

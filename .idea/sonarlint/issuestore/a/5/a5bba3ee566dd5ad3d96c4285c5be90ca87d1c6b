@@ -1,0 +1,9 @@
+
+i
+java:S11924"GDefine a constant instead of duplicating this literal "author" 3 times.(æŒô¶üÿÿÿÿ8Ï½¢ˆÏ0
+]	java:S125#"<This block of commented-out lines of code should be removed.(±ÿáŽüÿÿÿÿ8‘¤ˆÏ0
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.(”Êº»øÿÿÿÿ8ù½¢ˆÏ0
+e
+java:S4488s"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(œÄˆ½8ú½¢ˆÏ0
+S
+java:S1128"1Remove this unused import 'javax.naming.Binding'.(ÛÆ§“úÿÿÿÿ8—ÑºˆÏ0

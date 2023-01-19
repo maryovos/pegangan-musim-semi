@@ -1,0 +1,11 @@
+
+v
+java:S1488A"`Immediately return this expression instead of assigning it to the temporary variable "loanList".(ã˜Ñ´
+€
+java:S1488d"jImmediately return this expression instead of assigning it to the temporary variable "loanByCustomerName".(¦íÍ•
+}
+java:S1488l"gImmediately return this expression instead of assigning it to the temporary variable "loanByBookTitle".(“™Í™
+Š
+java:S1488u"hImmediately return this expression instead of assigning it to the temporary variable "loanListBySearch".(À´ŒÔûÿÿÿÿ8Çã„Ï0
+C
+java:S1481c"-Remove this unused "loanList" local variable.(ã˜Ñ´

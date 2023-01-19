@@ -1,0 +1,8 @@
+
+}
+java:S1488?"`Immediately return this expression instead of assigning it to the temporary variable "response".(Èó²‡8¿Á²ÛÎ0
+Z	java:S1060"9Replace this use of System.out or System.err by a logger.(³ò–Îüÿÿÿÿ8ŞÁ²ÛÎ0
+T	java:S1061"9Replace this use of System.out or System.err by a logger.(µòÏ+8ŞÁ²ÛÎ0
+U	java:S1062"9Replace this use of System.out or System.err by a logger.(º›¾â8ßÁ²ÛÎ0
+T	java:S1064"9Replace this use of System.out or System.err by a logger.(Ú¨‹>8àÁ²ÛÎ0
+Z	java:S106:"9Replace this use of System.out or System.err by a logger.(İ¸¹ğÿÿÿÿÿ8äÁ²ÛÎ0

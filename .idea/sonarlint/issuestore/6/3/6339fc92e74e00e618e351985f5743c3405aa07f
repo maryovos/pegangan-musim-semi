@@ -1,0 +1,12 @@
+
+e
+java:S1192"IDefine a constant instead of duplicating this literal "username" 3 times.(­ÊÚ8üĞÎÚÎ0
+{
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "claims".(ƒ˜À™8ıĞÎÚÎ0
+v	java:S116"URename this field "SECRET_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãš§¯úÿÿÿÿ8‹ÑÎÚÎ0
+Y
+java:S1117,"<Rename "audience" which hides the field declared at line 14.(›Âô¨8—ÑÎÚÎ0
+b
+java:S1764-"ECorrect one of the identical sub-expressions on both sides of equals.(Ú†¶¿8šÑÎÚÎ0
+I
+java:S1068",Remove this unused "audience" private field.(Ëİâì8šÑÎÚÎ0

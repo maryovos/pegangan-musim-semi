@@ -1,0 +1,13 @@
+
+l
+java:S11921"ODefine a constant instead of duplicating this literal "Loan With ID: " 3 times.(‹œ—8ºà„ÓÎ0
+k
+java:S11921"NDefine a constant instead of duplicating this literal " not found!!!" 4 times.(‹œ—8Ğİ¤ÓÎ0
+_
+java:S2583C"DChange this condition so that it does not always evaluate to "false"(¬ àõıÿÿÿÿ
+=
+java:S1125?"'Remove the unnecessary boolean literal.(¼¡í
+Z
+java:S1128"8Remove this unused import 'com.indocyber.dto.AuthorDto'.(¸Ú³÷şÿÿÿÿ8Ë¶¤ÓÎ0
+U
+java:S1128"8Remove this unused import 'com.indocyber.entity.Author'.(ı ş–8Ì¶¤ÓÎ0

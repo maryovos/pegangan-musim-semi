@@ -1,0 +1,10 @@
+
+b
+java:S1192"FDefine a constant instead of duplicating this literal "empty" 8 times.(Õ²çÑıÿÿÿÿ
+h
+java:S1192."MDefine a constant instead of duplicating this literal "customerList" 4 times.(–İåÆÿÿÿÿÿ
+_
+java:S1192/"IDefine a constant instead of duplicating this literal "bookList" 4 times.(ì·ïÉ
+S	java:S106_"9Replace this use of System.out or System.err by a logger.(°ª‘øÿÿÿÿ
+M	java:S106i"9Replace this use of System.out or System.err by a logger.(Ôæ±9
+S	java:S106}"9Replace this use of System.out or System.err by a logger.(ñ’›»ıÿÿÿÿ

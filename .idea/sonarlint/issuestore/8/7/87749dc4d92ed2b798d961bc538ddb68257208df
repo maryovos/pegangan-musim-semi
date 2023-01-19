@@ -1,0 +1,17 @@
+
+}
+java:S1488"bImmediately return this expression instead of assigning it to the temporary variable "authorList".(Êƒ–üÿÿÿÿ
+€
+java:S1488S"jImmediately return this expression instead of assigning it to the temporary variable "optionalAuthorList".(åëÃÆ
+w
+java:S1488\"\Immediately return this expression instead of assigning it to the temporary variable "grid".(…›şÿÿÿÿ
+y
+java:S1488e"\Immediately return this expression instead of assigning it to the temporary variable "grid".(Éìÿ²8õ¯îˆÏ0
+|
+java:S1488n"aImmediately return this expression instead of assigning it to the temporary variable "totalPage".(„èêãùÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(¡­À
+F
+java:S1905l")Remove this unnecessary cast to "double".(•©Ùü8Èª‹¤Ï0
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Êª‹¤Ï0
