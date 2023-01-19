@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/myStyle2.css}">
+</head>
+<body>
+
+<div class="global-wrapper">
+    <nav>
+        <a th:href="@{/my-login/home}" class="menu">Home</a>
+        <a th:href="@{/author/index}" class="menu">Author</a>
+        <a th:href="@{/book/index}" class="menu selected">Book</a>
+        <a th:href="@{/customer/index}" class="menu">Customer</a>
+        <a th:href="@{/loan/index}" class="menu">Loan</a>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="button-add" value="Logout">
+        </form>
+    </nav>
+    <main>
+        <div class="top">
+            <span>Book</span>
+        </div>
+        <div class="content">
+            <div class="button-top">
+                <a class="button-add" th:href="@{/book/addCategory}"> Add New category</a>
+                <form th:attr="action=@{/book/processSearching}">
+                    <input type="search" id="search" name="search" placeholder="pencarian category">
+                    <input type="submit" class="button-add" value="cari">
+                </form>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Floor</th>
+                        <th>Isle</th>
+                        <th>Bay</th>
+                        <th>Total Books</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="category: ${categoryList}">
+                        <td th:text="${category.getName()}"></td>
+                        <td th:text="${category.getFloor()}"></td>
+                        <td th:text="${category.getIsle()}"></td>
+                        <td th:text="${category.getBay()}"></td>
+                        <td th:text="${category.getBookList().size()}"></td>
+                        <td>
+                            <a class="button" th:href="@{'/book/showBooks/' + ${category.getName()}}"> Book</a>
+                            <a class="button" th:href="@{'/book/editCategory/' + ${category.getName()}}"> Edit</a>
+                            <a class="button" th:href="@{'/book/deleteCategory/' + ${category.getName()}}"> Delete</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+
+</body>
+</html>

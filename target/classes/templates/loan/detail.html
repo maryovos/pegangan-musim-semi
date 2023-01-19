@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/myStyle2.css}">
+</head>
+<body>
+<div class="global-wrapper">
+    <nav>
+        <a th:href="@{/my-login/home}" class="menu">Home</a>
+        <a th:href="@{/author/index}" class="menu">Author</a>
+        <a th:href="@{/book/index}" class="menu">Book</a>
+        <a th:href="@{/customer/index}" class="menu">Customer</a>
+        <a th:href="@{/loan/index}" class="menu selected">Loan</a>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="button-add" value="Logout">
+        </form>
+    </nav>
+    <main>
+        <div class="top">
+            <span>Detail Loan</span>
+        </div>
+
+
+        <div class="content">
+            <div class="button-top">
+                <a class="button-add"> Book</a>
+                <a class="button-add back" th:href="@{/loan/index}"> Back to Loan</a>
+            </div>
+            <div class="table">
+
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Title : </label>
+                            <span th:text="${book.getTitle()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Category : </label>
+                            <span th:text="${category.getName()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Author : </label>
+                            <span th:text="${author.getFullName()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Floor : </label>
+                            <span th:text="${category.getFloor()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Isle : </label>
+                            <span th:text="${category.getIsle()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Bay : </label>
+                            <span th:text="${category.getBay()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="content">
+            <div class="button-top">
+                <a class="button-add"> Customer</a>
+
+            </div>
+            <div class="table">
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Membership Number : </label>
+                            <span th:text="${customer.getMembershipNumber()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>FullName : </label>
+                            <span th:text="${customer.getFullName()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Phone : </label>
+                            <span th:text="${customer.getPhone()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Membership Expire Date : </label>
+                            <span th:text="${customer.getMembershipExpireDateString()}"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+</div>
+</body>
+</html>

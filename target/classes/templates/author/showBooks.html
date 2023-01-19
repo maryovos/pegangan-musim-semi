@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Author</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/myStyle2.css}">
+</head>
+<body>
+<div class="global-wrapper">
+    <nav>
+        <a th:href="@{/my-login/home}" class="menu">Home</a>
+        <a th:href="@{/author/index}" class="menu selected">Author</a>
+        <a th:href="@{/book/index}" class="menu">Book</a>
+        <a th:href="@{/customer/index}" class="menu">Customer</a>
+        <a th:href="@{/loan/index}" class="menu">Loan</a>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="button-add" value="Logout">
+        </form>
+    </nav>
+    <main>
+        <div class="top">
+            <span>Author's Book(s)</span>
+        </div>
+        <div class="content">
+            <div class="button-top">
+                <a th:href="@{/author/index}" class="button-add back">Back to Author Index</a>
+            </div>
+
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Name : </label>
+                        <span th:text="${author.getFullName()}"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Birth Date : </label>
+                        <span th:text="${author.getBirthDateString()}"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Decease Date : </label>
+                        <span th:text="${author.getDeceasedDateString()}"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Education : </label>
+                        <span th:text="${author.getEducation()}"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Summary : </label>
+                        <span th:text="${author.getSummary()}"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Category</th>
+                        <th>Is Borrowed</th>
+                        <th>Release Date</th>
+                        <th>Total Page</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="book: ${author.getBookList()}">
+                        <td th:text="${book.getTitle()}"></td>
+                        <td th:text="${book.getCategoryName().getName()}"></td>
+                        <td th:text="${book.getBorrowedString()}"></td>
+                        <td th:text="${book.getReleaseDateString()}"></td>
+                        <td th:text="${book.getTotalPage()}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+</body>
+</html>

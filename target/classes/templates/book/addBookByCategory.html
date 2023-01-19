@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/myStyle2.css}">
+</head>
+<body>
+
+<div class="global-wrapper">
+    <nav>
+        <a th:href="@{/author/index}" class="menu">Author</a>
+        <a th:href="@{/book/index}" class="menu selected">Book</a>
+        <a th:href="@{/customer/index}" class="menu">Customer</a>
+        <a th:href="@{/loan/index}" class="menu">Loan</a>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="button-add" value="Logout">
+        </form>
+    </nav>
+    <main>
+        <div class="top">
+            <span>Add Book By Category</span>
+        </div>
+        <div class="content">
+            <form th:attr="action=@{/book/proccessBook}" method="post" th:object="${book}">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                <div class="container-form">
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Category*</label>
+                            <span class="error" th:errors="*{categoryName}" />
+                        </div>
+                        <input type="text" disabled th:field="*{categoryName}">
+                        <input type="hidden" th:field="*{categoryName}">
+                    </div>
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Code*</label>
+                            <span class="error" th:errors="*{code}" />
+                        </div>
+                        <input type="text" th:field="*{code}">
+                    </div>
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Title*</label>
+                            <span class="error" th:errors="*{title}" />
+                        </div>
+                        <input type="text" th:field="*{title}">
+                    </div>
+                </div>
+
+                <div class="container-form">
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Author*</label>
+                            <span class="error" th:errors="*{author}" />
+                        </div>
+                        <select th:field="*{author}">
+                            <option th:each="author: ${authorList}" th:value="${author.getId()}" th:text="${author.getFullName()}"  ></option>
+                        </select>
+
+                    </div>
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Release Date</label>
+                            <span class="error" th:errors="*{releaseDate}" />
+                        </div>
+                        <input type="date"  th:field="*{releaseDate}" th:value="*{releaseDate}">
+                    </div>
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Total Page</label>
+                            <span class="error" th:errors="*{totalPage}" />
+                        </div>
+                        <input type="text" th:field="*{totalPage}">
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Summary</label>
+                            <span class="error" th:errors="*{summary}" />
+                        </div>
+                        <textarea th:field="*{summary}" cols="30" rows="10"></textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="button">
+                    <input class="button-add" type="submit" value="Submit">
+                    <a th:href="@{'/book/showBooks/' + *{categoryName.getName()}}" class="button-add back">Back</a>
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+
+</body>
+</html>

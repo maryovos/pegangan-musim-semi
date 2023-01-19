@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="global-wrapper">
+
+    <div class="left">
+
+        <div class="title">
+            <p>Winterhold <span class="spring">Library</span></p>
+        </div>
+        <div class="description">
+            <p>Knowledge is the best weapon you have, please find some fascinating
+            books we have. This app will help you do that, as long as you
+            keep extend your membership</p>
+            <p>(its totally free!!)</p>
+        </div>
+        <div class="button">
+            <a th:href="@{/my-login/home}" class="button-start">Get Started</a>
+        </div>
+
+    </div>
+    <div class="right"></div>
+
+</div>
+
+
+</body>
+</html>

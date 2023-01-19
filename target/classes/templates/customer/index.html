@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/myStyle2.css}">
+</head>
+<body>
+<div class="global-wrapper">
+    <nav>
+        <a th:href="@{/my-login/home}" class="menu">Home</a>
+        <a th:href="@{/author/index}" class="menu">Author</a>
+        <a th:href="@{/book/index}" class="menu">Book</a>
+        <a th:href="@{/customer/index}" class="menu selected">Customer</a>
+        <a th:href="@{/loan/index}" class="menu">Loan</a>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="button-add" value="Logout">
+        </form>
+    </nav>
+    <main>
+        <div class="top">
+            <span>Customer</span>
+        </div>
+        <div class="content">
+            <div class="button-top">
+                <a class="button-add" th:href="@{/customer/addCustomer}"> Add New Customer</a>
+                <form th:attr="action=@{/customer/processSearching}">
+                    <input type="search" id="search1" name="searchNumber" placeholder="pencarian number">
+                    <input type="search" id="search2" name="searchName" placeholder="pencarian name">
+                    <input type="submit" class="button-add" value="cari">
+                </form>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Membership Number</th>
+                        <th>Full Name</th>
+                        <th>Expire Date</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="customer: ${customers}">
+                        <td><a  class="button customer" th:href="@{'/customer/detailCustomer/' + ${customer.getMembershipNumber()}}" th:text="${customer.getMembershipNumber()}"></a></td>
+                        <td th:text="${customer.getFullName()}"></td>
+                        <td th:text="${customer.getMembershipExpireDateString()}"></td>
+                        <td>
+                            <a class="button" th:href="@{'/customer/extendCustomer/' + ${customer.getMembershipNumber()}}"> Extend</a>
+                            <a class="button" th:href="@{'/customer/editCustomer/' + ${customer.getMembershipNumber()}}"> Edit</a>
+                            <a class="button" th:href="@{'/customer/deleteCustomer/' + ${customer.getMembershipNumber()}}"> Delete</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+</body>
+</html>

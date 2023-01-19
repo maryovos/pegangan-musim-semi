@@ -1,0 +1,68 @@
+    <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/myStyle2.css}">
+</head>
+<body>
+<div class="global-wrapper">
+    <nav>
+        <a th:href="@{/my-login/home}" class="menu">Home</a>
+        <a th:href="@{/author/index}" class="menu">Author</a>
+        <a th:href="@{/book/index}" class="menu">Book</a>
+        <a th:href="@{/customer/index}" class="menu">Customer</a>
+        <a th:href="@{/loan/index}" class="menu selected">Loan</a>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="button-add" value="Logout">
+        </form>
+    </nav>
+    <main>
+        <div class="top">
+            <span>Loan</span>
+        </div>
+        <div class="content">
+            <div class="button-top">
+                <a class="button-add" th:href="@{/loan/addLoan}"> Add New Loan</a>
+                <form th:attr="action=@{/loan/processSearching}">
+                    <input type="search" id="search1" name="searchBookTitle" placeholder="pencarian book title">
+                    <input type="search" id="search2" name="searchName" placeholder="pencarian customer name ">
+                    <input type="submit" class="button-add" value="cari">
+                </form>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Customer Name</th>
+                        <th>Loan Date</th>
+                        <th>Due Date</th>
+                        <th>Return Date</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="loan: ${loanList}">
+                        <td th:text="${loan.getBookCode().getTitle()}"></td>
+                        <td th:text="${loan.getCustomerNumber().getFullName()}"></td>
+                        <td th:text="${loan.getLoanDateString()}"></td>
+                        <td th:text="${loan.getDueDateString()}"></td>
+                        <td th:text="${loan.getReturnDateString()}"></td>
+                        <td>
+                            <a class="button" th:href="@{'/loan/detailBook/' + ${loan.getId()}}"> Detail</a>
+                            <a class="button" th:href="@{'/loan/editBook/' + ${loan.getId()}}"> Edit</a>
+                            <a class="button" th:href="@{'/loan/returnBook/' + ${loan.getId()}}"> Return</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+</body>
+</html>

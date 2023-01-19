@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Customer</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/myStyle2.css}">
+</head>
+<body>
+<div class="global-wrapper">
+    <nav>
+        <a th:href="@{/my-login/home}" class="menu">Home</a>
+        <a th:href="@{/author/index}" class="menu">Author</a>
+        <a th:href="@{/book/index}" class="menu">Book</a>
+        <a th:href="@{/customer/index}" class="menu selected">Customer</a>
+        <a th:href="@{/loan/index}" class="menu">Loan</a>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="button-add" value="Logout">
+        </form>
+    </nav>
+    <main>
+        <div class="top">
+            <span>Detail Customer</span>
+        </div>
+        <div class="content">
+            <div class="button-top">
+                <a th:href="@{/customer/index}" class="button-add back">Back to Customer Index</a>
+            </div>
+
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Membership Number : </label>
+                        <span th:text="${customer.getMembershipNumber()}"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Full Name : </label>
+                        <span th:text="${customer.getFullName()}"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Birth Date : </label>
+                        <span th:text="${customer.getBirthDateString()}"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Gender : </label>
+                        <span th:text="${customer.getGender()}"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Phone : </label>
+                        <span th:text="${customer.getPhone()}"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-form">
+                <div class="div-input length3">
+                    <div class="title">
+                        <label>Address : </label>
+                        <span th:text="${customer.getAddress()}"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+</body>
+</html>

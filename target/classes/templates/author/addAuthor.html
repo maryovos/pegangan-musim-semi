@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/normalize.css}">
+    <link rel="stylesheet" th:href="@{/myStyle2.css}">
+</head>
+<body>
+
+<div class="global-wrapper">
+    <nav>
+        <a th:href="@{/my-login/home}" class="menu">Home</a>
+        <a th:href="@{/author/index}" class="menu selected">Author</a>
+        <a th:href="@{/book/index}" class="menu">Book</a>
+        <a th:href="@{/customer/index}" class="menu">Customer</a>
+        <a th:href="@{/loan/index}" class="menu">Loan</a>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="button-add" value="Logout">
+        </form>
+    </nav>
+    <main>
+        <div class="top">
+            <span>Add Author</span>
+        </div>
+        <div class="content">
+            <form th:attr="action=@{/author/proccessAuthor}" method="post" th:object="${author}">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                <div class="container-form">
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Title*</label>
+                            <span class="error" th:errors="*{title}" />
+                        </div>
+                        <input type="text" th:field="*{title}">
+                    </div>
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>First Name*</label>
+                            <span class="error" th:errors="*{firstName}" />
+                        </div>
+                        <input type="text" th:field="*{firstName}">
+                    </div>
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Last Name*</label>
+                            <span class="error" th:errors="*{lastName}" />
+                        </div>
+                        <input type="text" th:field="*{lastName}">
+                    </div>
+                </div>
+
+                <div class="container-form">
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Birth Date*</label>
+                            <span class="error" th:errors="*{birthDate}" />
+                        </div>
+                        <input type="date"  th:field="*{birthDate}" th:value="*{birthDate}">
+
+                    </div>
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Decease Date</label>
+                            <span class="error" th:errors="*{deceasedDate}" />
+                        </div>
+                        <input type="date" th:value="*{deceasedDate}" th:field="*{deceasedDate}">
+                    </div>
+
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Education</label>
+                            <span class="error" th:errors="*{education}" />
+                        </div>
+                        <input type="text" th:field="*{education}">
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <div class="div-input length3">
+                        <div class="title">
+                            <label>Summary</label>
+                            <span class="error" th:errors="*{summary}" />
+                        </div>
+                        <textarea th:field="*{summary}" cols="30" rows="10"></textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="button">
+                    <input class="button-add" type="submit" value="Add Author"></input>
+                    <a th:href="@{/author/index}" class="button-add back">Back</a>
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+
+</body>
+</html>
